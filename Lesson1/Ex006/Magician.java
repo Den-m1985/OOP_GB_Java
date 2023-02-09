@@ -1,5 +1,7 @@
 package Lesson_07.Ex006;
 
+
+// Magician наследует BaseHero.
 public class Magician extends BaseHero {
 
     private int mana;

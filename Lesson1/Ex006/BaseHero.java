@@ -2,7 +2,10 @@ package Lesson_07.Ex006;
 
 import java.util.Random;
 
+
+// базовый герой
 public class BaseHero {
+    // protected модификатор доступа для этго класса и всех его наследователей.
     protected static int number;
     protected static Random r;
 
