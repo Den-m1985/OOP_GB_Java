@@ -6,8 +6,8 @@ public class HotDrinkVendingMachine extends VendingMachine {
         super(goods);
     }
 
-    public  getProduct(String name, double volume, double temperature){
-
-        return name, volume, temperature;
-    }
+//    public  getProduct(String name, double volume, double temperature){
+//
+//        return name, volume, temperature;
+//    }
 }

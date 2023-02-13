@@ -1,8 +1,12 @@
-import javax.xml.transform.sax.SAXResult;
-
 public class Product {
     private String name;
     private float price;
+
+
+    // конструктор по умолчанию
+    public Product() {
+        this("default", 0);
+    }
 
 
     public Product(String name, float price) {
