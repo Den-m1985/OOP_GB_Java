@@ -8,4 +8,8 @@ public class Drink extends Product {
     public void SetVolume(int volume){
         this.volume = volume;
     }
+
+    public void consume(){
+        System.out.println(" Напиток выпит ");
+    }
 }

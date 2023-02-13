@@ -26,4 +26,8 @@ public class Product {
         this.price = price;
     }
 
+    public void consume(){
+        System.out.println(" продукт потреблен ");
+    }
+
 }
