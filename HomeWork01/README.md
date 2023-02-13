@@ -5,7 +5,8 @@
 и реализовать перегруженный метод getProduct(String name,
 double volume, double temperature), выдающий продукт
 соответствующего имени, объема и температуры. 
-Используйте при итерации конструкцию if
+Используйте при итерации конструкцию 
+if
 (product instance of HotDrink){ HotDrink ht = (HotDrink) product; }
 
 В main проинициализировать несколько экземпляров HotDrink
