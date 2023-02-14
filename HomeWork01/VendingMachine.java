@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class VendingMachine {
-    public ArrayList<HotDrink> goods = new ArrayList<>();
+    protected ArrayList<HotDrink> goods = new ArrayList<>();
 
 
     public VendingMachine(ArrayList<HotDrink> goods) {

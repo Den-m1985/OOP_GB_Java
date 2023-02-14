@@ -11,11 +11,11 @@ public class Main {
         HotDrink coffee = new HotDrink("Capuchino", 220, 250, 70);
         goods.add(coffee);
 
-        System.out.println(teaLipton.getInfo());
-        System.out.println(coffee.getInfo());
 
-
-        VendingMachine vendingMachine = new VendingMachine(goods);
+        HotDrinkVendingMachine machine = new HotDrinkVendingMachine(goods);
+        // проверяем если такой товар и выводим инфо.
+        machine.getProduct("Lipton");
 
     }
+
 }
