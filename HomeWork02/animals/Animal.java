@@ -12,13 +12,14 @@ public abstract class Animal {
         this.countLimbs = countLimbs;
     }
 
+
     public abstract int getMaxWeight();
 
+
     public void feed(int foodWeight) {
-        if ( (this.weight + foodWeight) <= getMaxWeight()) {
+        if ((this.weight + foodWeight) <= getMaxWeight()) {
             this.weight = +foodWeight;
-        }
-        else System.out.println("Max weight is exceeded");
+        } else System.out.println("Max weight is exceeded");
     }
 
 

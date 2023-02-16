@@ -5,6 +5,7 @@ public class Wolf extends Animal {
     protected static final int MAX_WEIGHT = 100;
     protected static final String TYPE = "Wolf";
 
+
     public Wolf(int year, int weight, int countLimbs, int maneVolume) {
         super(year, weight, countLimbs);
         this.maneVolume = maneVolume;
@@ -24,19 +25,21 @@ public class Wolf extends Animal {
         return MAX_WEIGHT;
     }
 
+
     @Override
     public String getType() {
         return TYPE;
     }
 
+
     @Override
     public String toString() {
-        return "Wolfs {" +
+        return "Wolf {" +
                 "maneVolume = " + maneVolume +
                 ", year = " + year +
                 ", weight = " + weight +
                 ", countLimbs = " + countLimbs +
                 "}\n";
     }
-}
 
+}

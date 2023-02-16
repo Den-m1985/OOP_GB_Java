@@ -4,28 +4,32 @@ import animals.Animal;
 import animals.Wolf;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class WolfCage implements AnimalCage {
     private int cleanCage;
-    private ArrayList <Wolf> wolfs;
+    private ArrayList<Wolf> wolfs;
 
-    public WolfCage(ArrayList <Wolf>wolf) {
+
+    public WolfCage(ArrayList<Wolf> wolf) {
         this.wolfs = wolf;
     }
 
+
     @Override
     public String toString() {
-        return "WolfCage {" +
+        return "WolfCage: " +
                 "cleanCage = " + cleanCage +
-                ", wolfs:\n" + wolfs +
-                "}";
+                ", wolfs:\n" + wolfs;
     }
+
 
     @Override
     public void addAnimal(Animal animal) {
-        // добавить проверку на instance off ?
-        wolfs.add((Wolf) animal);
+        if (animal instanceof Animal)
+            wolfs.add((Wolf) animal);
     }
+
 
     @Override
     public int setFeed(int weightFood) {
@@ -34,16 +38,24 @@ public class WolfCage implements AnimalCage {
         return wolfFeed;
     }
 
+
     @Override
     public int cleanCase() {
         this.cleanCage = 0;
         return cleanCage;
     }
 
+
     @Override
     public void getRandomAnimal() {
-        for (Wolf wolf: this.wolfs) {
-            System.out.println(wolf);
+        int length = wolfs.size();
+        Random randoms = new Random();
+        int ran = randoms.nextInt(length);
+
+        for (int i = 0; i < length; i++) {
+            if (i == ran) System.out.println(wolfs.get(i));
         }
     }
+
+
 }

@@ -1,4 +1,5 @@
 package cage;
+
 import animals.*;
 
 public interface AnimalCage {
@@ -8,5 +9,6 @@ public interface AnimalCage {
     int setFeed(int weightFood);
 
     int cleanCase();
+
     void getRandomAnimal();
 }
