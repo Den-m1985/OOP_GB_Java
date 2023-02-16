@@ -28,4 +28,15 @@ public class Lion extends Animal {
     public String getType() {
         return TYPE;
     }
+
+    @Override
+    public String toString() {
+        return "Lion{" +
+                "maneVolume=" + maneVolume +
+                ", year=" + year +
+                ", weight=" + weight +
+                ", countLimbs=" + countLimbs +
+                '}';
+    }
 }
+
