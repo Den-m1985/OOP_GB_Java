@@ -1,4 +1,4 @@
-package Lesson_09.Ex001;
+package Ex001;
 
 public class Worker {
     public String firstName;

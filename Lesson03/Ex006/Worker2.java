@@ -1,4 +1,4 @@
-package Lesson_09.Ex006;
+package Ex006;
 
 public class Worker2 implements Comparable<Worker2> {
     public String firstName;
