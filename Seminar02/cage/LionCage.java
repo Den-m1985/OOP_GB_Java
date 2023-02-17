@@ -2,8 +2,10 @@ package cage;
 
 import animals.Animal;
 import animals.Lion;
+import animals.LionComparator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class LionCage implements AnimalCage {
     private int cleanCage;
@@ -39,5 +41,15 @@ public class LionCage implements AnimalCage {
     public int cleanCase() {
         this.cleanCage = 0;
         return cleanCage;
+    }
+
+    // Семинар 3
+    public  void  sortLions(){
+        Collections.sort(lions);
+    }
+
+    public  void  sortVolume(){
+
+        Collections.sort(lions);
     }
 }
