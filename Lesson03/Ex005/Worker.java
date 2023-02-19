@@ -1,6 +1,6 @@
 package Ex005;
 
-public class Worker implements Comparable<Worker> {
+public class Worker implements Comparable<Worker>{
     public String firstName;
     public String lastName;
     public int age;

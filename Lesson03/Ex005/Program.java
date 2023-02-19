@@ -40,22 +40,22 @@ public class Program {
 
         // #region Comparable<Worker>
 
-        // List<Worker> db = new ArrayList<>();
-        // for (int i = 0; i < 5; i++) {
-        //     db.add(new Worker("Имя " + i, "Фамилия " + i, r.nextInt(18, 31), r.nextInt(10000)));
-        // }
-        // System.out.println(db);
+         List<Worker> db = new ArrayList<>();
+         for (int i = 0; i < 5; i++) {
+             db.add(new Worker("Имя " + i, "Фамилия " + i, r.nextInt(18, 31), r.nextInt(10000)));
+         }
+         System.out.println(db);
 
-        // db.sort(new AgeComporator());
+         db.sort(new AgeComporator());
 
-        // System.out.println(db);
+         System.out.println(db);
 
         // #endregion
 
         //#region
 
-        Worker w1 = new Worker("Имя", "Фамилия", 20, 20);
-        Worker w2 = new Worker("Имя", "Фамилия", 20, 20);
+//        Worker w1 = new Worker("Имя", "Фамилия", 20, 20);
+//        Worker w2 = new Worker("Имя", "Фамилия", 20, 20);
         
 
         //#endregion
