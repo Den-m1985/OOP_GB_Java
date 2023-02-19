@@ -13,7 +13,7 @@ public class Main {
         LionCage lionsInCage = new LionCage(lions);
         //System.out.println(lionsInCage);
 
-        Collections.sort(lions);
+        //Collections.sort(lions);
         //System.out.println(lions);
 
         lionsInCage.sortVolume();

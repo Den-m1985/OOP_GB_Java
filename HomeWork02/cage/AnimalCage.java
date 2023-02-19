@@ -2,13 +2,15 @@ package cage;
 
 import animals.*;
 
+import java.util.List;
+
 public interface AnimalCage {
 
     void addAnimal(Animal animal);
 
-    int setFeed(int weightFood);
+    void setFeed(int weightFood);
 
     int cleanCase();
 
-    void getRandomAnimal();
+    List getRandomAnimal();
 }
