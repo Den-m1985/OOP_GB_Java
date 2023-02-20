@@ -1,5 +1,7 @@
 package animals;
 
+import java.util.Comparator;
+
 public class Wolf extends Animal implements Comparable<Wolf> {
     protected int maneVolume;
     protected static final int MAX_WEIGHT = 100;
@@ -51,5 +53,10 @@ public class Wolf extends Animal implements Comparable<Wolf> {
             return -1;
         else
             return 0;
+
+        // https://stackoverflow.com/questions/369512/how-to-compare-objects-by-multiple-fields
+//        return Comparator.comparing(Wolf::getYear)
+//                .thenComparing(Wolf::getWeight)
+//                .compare(this, o);
     }
 }
