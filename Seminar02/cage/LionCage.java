@@ -25,7 +25,7 @@ public class LionCage implements AnimalCage {
     }
 
     @Override
-    public void addAnimal(Animal animal) {
+    public void addAnimal(<T> animal) {
         // добавить проверку на instance off ?
         lions.add((Lion) animal);
     }

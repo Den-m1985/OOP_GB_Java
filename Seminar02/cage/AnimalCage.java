@@ -1,9 +1,10 @@
 package cage;
 import animals.*;
 
-public interface AnimalCage {
+public interface AnimalCage <T> {
 
-    void addAnimal(Animal animal);
+
+    void addAnimal(<T> animal);
 
     int setFeed(int weightFood);
 
