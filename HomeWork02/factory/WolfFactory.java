@@ -7,8 +7,10 @@ import java.util.Random;
 public class WolfFactory {
     private int wolfCount;
 
-
-    public static ArrayList<Wolf> createLions(int wolfCount) {
+    /**
+     * Create wolfs.
+     */
+    public static ArrayList<Wolf> createWolfs(int wolfCount) {
         Random random = new Random();
         ArrayList<Wolf> createLions = new ArrayList<>();
 
