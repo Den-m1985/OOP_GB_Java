@@ -1,9 +1,9 @@
+import animalUtils.AnimalUtils;
 import animals.*;
 import factory.*;
 import cage.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,9 +16,11 @@ public class Main {
         //Collections.sort(lions);
         //System.out.println(lions);
 
-        lionsInCage.sortVolume();
-        System.out.println(lionsInCage);
+//        lionsInCage.sortVolume();
+//        System.out.println(lionsInCage);
 
+        AnimalUtils.sortAnimals(lions);
+        System.out.println(lions);
 
 
     }

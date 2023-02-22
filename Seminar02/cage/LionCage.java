@@ -2,17 +2,14 @@ package cage;
 
 import animals.Animal;
 import animals.Lion;
-import animals.LionComparator;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class LionCage implements AnimalCage {
+public class LionCage implements AnimalCage<Lion> {
     private int cleanCage;
     private ArrayList <Lion> lions;
 
     public LionCage(ArrayList <Lion>lions) {
-        //this.lions = new ArrayList<Lion>();
         this.lions = lions;
     }
 
@@ -25,9 +22,8 @@ public class LionCage implements AnimalCage {
     }
 
     @Override
-    public void addAnimal(<T> animal) {
-        // добавить проверку на instance off ?
-        lions.add((Lion) animal);
+    public void addAnimal(Lion animal) {
+        lions.add(animal);
     }
 
     @Override
