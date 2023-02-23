@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class HotDrinkVendingMachine extends VendingMachine {
+public class HotDrinkVendingMachine extends VendingMachine<HotDrink> {
 
     public HotDrinkVendingMachine(ArrayList<HotDrink> goods) {
         super(goods);
@@ -14,11 +14,16 @@ public class HotDrinkVendingMachine extends VendingMachine {
             if
             (product.getName().contains(name)) {
                 findSearch.add(product);
-                System.out.println(product.getInfo());
+                //System.out.println(product.getInfo());
             }
         }
         return findSearch;
     }
 
-
+    @Override
+    public String toString() {
+        return "HotDrinkVendingMachine{" +
+                "goods=" + goods +
+                '}';
+    }
 }

@@ -15,5 +15,10 @@ public class Drink extends Product {
         return volume;
     }
 
-
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "volume=" + volume +
+                '}';
+    }
 }

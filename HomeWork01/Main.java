@@ -13,9 +13,10 @@ public class Main {
 
 
         HotDrinkVendingMachine machine = new HotDrinkVendingMachine(goods);
-        // проверяем если такой товар и выводим инфо.
-        machine.getProduct("Lipton");
 
+        System.out.println(machine.getProduct("Lipton"));
+
+        System.out.println(machine.GetProductByName("Lipton"));
     }
 
 }

@@ -24,4 +24,9 @@ public class HotDrink extends Drink {
         return temperate;
     }
 
+    @Override
+    public String toString() {
+        return "HotDrinks: " +
+                "info= " + getInfo() + "\n";
+    }
 }

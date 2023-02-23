@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
-public class VendingMachine {
-    protected ArrayList<HotDrink> goods = new ArrayList<>();
+public class VendingMachine <T extends Product> {
+    protected ArrayList<T> goods;
 
 
-    public VendingMachine(ArrayList<HotDrink> goods) {
+    public VendingMachine(ArrayList<T> goods) {
         this.goods = goods;
     }
 
-    public Product GetProductByName(String name) {
-        for (Product el : goods) {
+    public T GetProductByName(String name) {
+        for (T el : goods) {
             if (el.getName().equals(name)) return el;
         }
 
@@ -17,4 +17,10 @@ public class VendingMachine {
     }
 
 
+    @Override
+    public String toString() {
+        return "VendingMachine{" +
+                "goods=" + goods +
+                '}';
+    }
 }
