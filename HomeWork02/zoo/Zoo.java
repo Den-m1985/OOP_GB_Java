@@ -4,29 +4,40 @@ import animals.Snake;
 import animals.Wolf;
 import cage.AnimalCage;
 
+import java.util.ArrayList;
+
 
 public class Zoo {
-    private AnimalCage<Wolf> wolfCage;
-    private AnimalCage<Snake> snakeCage;
+    private AnimalCage<Wolf> wolvesInZoo;
+    private AnimalCage<Snake> snakesInZoo;
 
-    public Zoo(AnimalCage<Wolf> wolfCage, AnimalCage<Snake> snakeCage) {
-        this.wolfCage = wolfCage;
-        this.snakeCage = snakeCage;
+
+    public Zoo() {
+        ArrayList<Zoo> animalInZoo = new ArrayList<>();
     }
 
-    public AnimalCage<Wolf> getWolfCage() {
-        return wolfCage;
+
+    public AnimalCage<Wolf> getWolvesInZoo() {
+        return wolvesInZoo;
     }
 
-    public void setWolfCage(AnimalCage<Wolf> wolfCage) {
-        this.wolfCage = wolfCage;
+    public void setWolvesInZoo(AnimalCage<Wolf> wolvesInZoo) {
+        this.wolvesInZoo = wolvesInZoo;
     }
 
-    public AnimalCage<Snake> getSnakeCage() {
-        return snakeCage;
+    public AnimalCage<Snake> getSnakesInZoo() {
+        return snakesInZoo;
     }
 
-    public void setSnakeCage(AnimalCage<Snake> snakeCage) {
-        this.snakeCage = snakeCage;
+    public void setSnakesInZoo(AnimalCage<Snake> snakesInZoo) {
+        this.snakesInZoo = snakesInZoo;
+    }
+
+    @Override
+    public String toString() {
+        return "Zoo: " +
+                "wolves: " + wolvesInZoo +"\n"+
+                ", snakes: " + snakesInZoo +
+                "\n";
     }
 }

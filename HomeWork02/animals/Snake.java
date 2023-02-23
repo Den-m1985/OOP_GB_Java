@@ -30,4 +30,12 @@ public class Snake extends Animal {
         return MAX_WEIGHT;
     }
 
+    @Override
+    public String toString() {
+        return "Snake - " +
+                "bodyLength=" + bodyLength +
+                ", year=" + year +
+                ", weight=" + weight +
+                "\n";
+    }
 }
