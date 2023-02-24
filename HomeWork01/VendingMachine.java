@@ -8,7 +8,7 @@ public class VendingMachine <T extends Product> {
         this.goods = goods;
     }
 
-    public T GetProductByName(String name) {
+    public T getProductByName(String name) {
         for (T el : goods) {
             if (el.getName().equals(name)) return el;
         }

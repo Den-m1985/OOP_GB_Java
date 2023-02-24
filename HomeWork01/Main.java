@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println(machine.getProduct("Lipton"));
 
-        System.out.println(machine.GetProductByName("Lipton"));
+        System.out.println(machine.getProductByName("Lipton"));
     }
 
 }
