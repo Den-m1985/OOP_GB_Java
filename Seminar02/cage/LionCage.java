@@ -1,6 +1,5 @@
 package cage;
 
-import animals.Animal;
 import animals.Lion;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,9 +8,11 @@ public class LionCage implements AnimalCage<Lion> {
     private int cleanCage;
     private ArrayList <Lion> lions;
 
+
     public LionCage(ArrayList <Lion>lions) {
         this.lions = lions;
     }
+
 
     @Override
     public String toString() {
@@ -21,9 +22,16 @@ public class LionCage implements AnimalCage<Lion> {
                 '}';
     }
 
+
     @Override
     public void addAnimal(Lion animal) {
         lions.add(animal);
+    }
+
+
+    public Lion takeOfAnimal() {
+
+        return null;
     }
 
     @Override
@@ -39,13 +47,14 @@ public class LionCage implements AnimalCage<Lion> {
         return cleanCage;
     }
 
+
     // Семинар 3
     public  void  sortLions(){
         Collections.sort(lions);
     }
 
-    public  void  sortVolume(){
 
+    public  void  sortVolume(){
         Collections.sort(lions);
     }
 }

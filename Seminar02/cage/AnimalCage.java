@@ -11,6 +11,8 @@ public interface AnimalCage <T extends Animal> {
 
     void addAnimal(T animal);
 
+    T takeOfAnimal();
+
     int setFeed(int weightFood);
 
     int cleanCase();

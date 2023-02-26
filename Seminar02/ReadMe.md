@@ -67,5 +67,16 @@
     создать класс AnimalUtils и реализовать в нём статический метод для сортировки списка животных по возрасту
     <T extends Animal> List<T> sortAnimals (List<T> animalList)
 
+Семинар 5
+    Задача 1
+    Создать пекедж terminal. Дальнейшие работы ведем в нем
+    Создать интерфейс CommandParser c методом String[] parseCommand (String inputCommand)
+    Создать класс TerminalReader, который содержит переменную CommandParser и метод,
+    который в бесконечном цикле слушает команды с помощью Scanner(System.in)
 
-
+    Задача 2
+    Создать интерфейс CommandExecutable c абстрактным методом execute()
+    Реализовать 2 класса, имплементировав созданный интерфейс,
+    CreateLionExecutable и DeleteLionExecutable. 
+    В унаследованных методах они должны обращаться к методом класса LionCage объекта Zoo.
+    Подумать какие переменные могли бы содержать созданные классы
