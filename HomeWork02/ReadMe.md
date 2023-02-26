@@ -47,3 +47,11 @@
     Создать пэкедж animalUtils, работу продолжаем в нём
     создать класс AnimalUtils и реализовать в нём статический метод для сортировки списка животных по возрасту
     <T extends Animal> List<T> sortAnimals (List<T> animalList)
+  
+**Homework 5**
+    Повторить функционал с семинара №5
+    Создать класc CommandExecutableFactory
+    Реализовать в нём метод CommandExecutable create (String[] input),
+    где в зависимости от переданных параметров создается тот или иной класс
+    дописать тело метода endless() класса TerminalReader, так чтобы введенная команда парсилась,
+    на результате парсинга создавался объект CommandExecutable и вызывался метод execute()
