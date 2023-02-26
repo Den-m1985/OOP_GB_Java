@@ -49,6 +49,20 @@
     <T extends Animal> List<T> sortAnimals (List<T> animalList)
   
 **Homework 5**
+    Задача 1 семинара 5
+    Создать пекедж terminal. Дальнейшие работы ведем в нем
+    Создать интерфейс CommandParser c методом String[] parseCommand (String inputCommand)
+    Создать класс TerminalReader, который содержит переменную CommandParser и метод,
+    который в бесконечном цикле слушает команды с помощью Scanner(System.in)
+
+    Задача 2 семинара 5
+    Создать интерфейс CommandExecutable c абстрактным методом execute()
+    Реализовать 2 класса, имплементировав созданный интерфейс,
+    CreateLionExecutable и DeleteLionExecutable. 
+    В унаследованных методах они должны обращаться к методом класса LionCage объекта Zoo.
+    Подумать какие переменные могли бы содержать созданные классы
+
+    Homework
     Повторить функционал с семинара №5
     Создать класc CommandExecutableFactory
     Реализовать в нём метод CommandExecutable create (String[] input),
