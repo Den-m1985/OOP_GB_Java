@@ -1,13 +1,11 @@
 package terminal;
 
-import java.util.Scanner;
-
 public class TerminalReader {
     private static TerminalReader terminalReader;
     private CommandParser commandParser;
 
 
-    private TerminalReader(CommandParser commandParser) {
+    public TerminalReader(CommandParser commandParser) {
         this.commandParser = commandParser;
     }
 
@@ -20,13 +18,19 @@ public class TerminalReader {
     }
 
 
-    void endLess() {
-        Scanner scanner = new Scanner(System.in);
-        while (true){
-            String str = scanner.nextLine();
+    public static void runReader(){
+
+        String str = "";
+        while (true) {
+            ScanerConsole scanerConsole = new ScanerConsole();
+            System.out.println("Что вы хотите сделать?");
+            System.out.println("1 - Добавить животное? \n2 - Удалить животное?\nДля выхода нажмите q");
+            str = scanerConsole.endLess();
             if (str.equals("q")) break;
+            if (str.equals("1")) new CommandExecutableFactory();
         }
-        scanner.close();
+
+
     }
 
 

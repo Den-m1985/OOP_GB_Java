@@ -4,6 +4,7 @@ import cage.SnakeTerrarium;
 import cage.WolfCage;
 import factory.SnakesFactory;
 import factory.WolfFactory;
+import terminal.TerminalReader;
 import zoo.Zoo;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class Main {
         //System.out.print("Random wolf: ");
         List<Wolf> wolfRandom = new ArrayList<>();
         wolfRandom = wolvesInCage.getRandomAnimal();
-       //System.out.println(wolfRandom);
+        //System.out.println(wolfRandom);
         Wolf pushok = new Wolf(2001, 6, 4, 6);
         wolvesInCage.addAnimal(pushok);
 //        System.out.println(wolvesInCage);
@@ -52,7 +53,13 @@ public class Main {
         Zoo zoo = new Zoo();
         zoo.setSnakesInZoo(snakesInCage);
         zoo.setWolvesInZoo(wolvesInCage);
-        System.out.println(zoo);
+        //ystem.out.println(zoo);
+
+
+        // Homework5
+
+
+        TerminalReader.runReader();
 
 
     }
