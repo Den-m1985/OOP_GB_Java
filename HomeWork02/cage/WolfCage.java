@@ -82,5 +82,9 @@ public class WolfCage implements AnimalCage<Wolf> {
     }
 
 
+    public Wolf takeOfAnimal() {
+
+        return null;
+    }
 
 }

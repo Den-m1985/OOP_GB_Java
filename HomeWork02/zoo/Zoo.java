@@ -40,4 +40,9 @@ public class Zoo {
                 ", snakes: " + snakesInZoo +
                 "\n";
     }
+
+    public Wolf takeOfWolf() {
+        return this.wolvesInZoo.takeOfAnimal();
+    }
+
 }

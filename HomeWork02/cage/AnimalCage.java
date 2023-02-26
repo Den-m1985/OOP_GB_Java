@@ -13,4 +13,6 @@ public interface AnimalCage <T extends Animal> {
     int cleanCase();
 
     List getRandomAnimal();
+
+    T takeOfAnimal();
 }

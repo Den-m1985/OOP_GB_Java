@@ -43,4 +43,10 @@ public class SnakeTerrarium implements AnimalCage<Snake> {
     public List getRandomAnimal() {
         return null;
     }
+
+
+    public Snake takeOfAnimal() {
+
+        return null;
+    }
 }
