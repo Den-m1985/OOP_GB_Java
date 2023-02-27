@@ -2,47 +2,62 @@ package zoo;
 
 import animals.Snake;
 import animals.Wolf;
-import cage.AnimalCage;
+import cage.SnakeTerrarium;
+import cage.WolfCage;
 
 import java.util.ArrayList;
 
 
 public class Zoo {
-    private AnimalCage<Wolf> wolvesInZoo;
-    private AnimalCage<Snake> snakesInZoo;
+    private WolfCage wolvesInZoo;
+    private SnakeTerrarium snakesInZoo;
+    private ArrayList<Zoo> animalInZoo;
 
 
     public Zoo() {
-        ArrayList<Zoo> animalInZoo = new ArrayList<>();
+        this.animalInZoo = new ArrayList<>();
     }
 
+    public void addSnake() {
 
-    public AnimalCage<Wolf> getWolvesInZoo() {
+    }
+
+    public WolfCage getWolvesInZoo() {
         return wolvesInZoo;
     }
 
-    public void setWolvesInZoo(AnimalCage<Wolf> wolvesInZoo) {
+
+    public void setWolvesInZoo(WolfCage wolvesInZoo) {
         this.wolvesInZoo = wolvesInZoo;
     }
 
-    public AnimalCage<Snake> getSnakesInZoo() {
+
+    public SnakeTerrarium getSnakesInZoo() {
         return snakesInZoo;
     }
 
-    public void setSnakesInZoo(AnimalCage<Snake> snakesInZoo) {
+
+    public void setSnakesInZoo(SnakeTerrarium snakesInZoo) {
         this.snakesInZoo = snakesInZoo;
     }
+
 
     @Override
     public String toString() {
         return "Zoo: " +
-                "wolves: " + wolvesInZoo +"\n"+
+                "wolves: " + wolvesInZoo + "\n" +
                 ", snakes: " + snakesInZoo +
                 "\n";
     }
 
+
     public Wolf takeOfWolf() {
         return this.wolvesInZoo.takeOfAnimal();
+    }
+
+
+    public Snake takeOfSnake() {
+        return this.snakesInZoo.takeOfAnimal();
     }
 
 }

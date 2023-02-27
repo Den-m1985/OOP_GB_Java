@@ -2,6 +2,7 @@ package cage;
 
 import animals.Wolf;
 import animals.WolfComparator;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -10,13 +11,13 @@ import java.util.Random;
 public class WolfCage implements AnimalCage<Wolf> {
     private int cleanCage;
     //private double food;
-    private ArrayList<Wolf> wolfs;
+    private ArrayList<Wolf> wolves;
 
     /**
      * Create cage whith wolfs
      */
     public WolfCage(ArrayList<Wolf> wolf) {
-        this.wolfs = wolf;
+        this.wolves = wolf;
 
     }
 
@@ -25,13 +26,13 @@ public class WolfCage implements AnimalCage<Wolf> {
     public String toString() {
         return "WolfCage: " +
                 "cleanCage = " + cleanCage +
-                ", wolfs:\n" + wolfs ;
+                ", wolfs:\n" + wolves;
     }
 
 
     @Override
     public void addAnimal(Wolf animal) {
-        wolfs.add(animal);
+        wolves.add(animal);
     }
 
 
@@ -51,40 +52,52 @@ public class WolfCage implements AnimalCage<Wolf> {
         return cleanCage;
     }
 
+
     /**
      * Get random wolf from cage.
      */
     @Override
     public List getRandomAnimal() {
         List<Wolf> wolfList = new ArrayList<>();
-        int length = wolfs.size();
+        int length = wolves.size();
         Random randoms = new Random();
         int ran = randoms.nextInt(length);
 
         for (int i = 0; i < length; i++) {
-            if (i == ran) wolfList.add(wolfs.get(i));
+            if (i == ran) wolfList.add(wolves.get(i));
         }
         return wolfList;
     }
+
 
     /**
      * Sort wolves by weight
      */
     public void sortWeight() {
-        wolfs.sort(new WolfComparator());
+        wolves.sort(new WolfComparator());
     }
+
 
     /**
      * Sort wolves by year
      */
     public void sortYear() {
-        Collections.sort(wolfs);
+        Collections.sort(wolves);
     }
 
 
+    /**
+     * Delete wolf
+     */
     public Wolf takeOfAnimal() {
-
-        return null;
+        if(this.wolves.isEmpty()){
+            return null;
+        }
+        else {
+            Random random = new Random();
+            int i = random.nextInt(wolves.size());
+            return (Wolf) wolves.remove(i);
+        }
     }
 
 }

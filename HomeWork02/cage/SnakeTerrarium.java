@@ -1,9 +1,11 @@
 package cage;
 
 import animals.Snake;
+import animals.Wolf;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class SnakeTerrarium implements AnimalCage<Snake> {
     private int cleanCage;
@@ -24,7 +26,7 @@ public class SnakeTerrarium implements AnimalCage<Snake> {
 
 
     @Override
-    public void addAnimal(Snake animal) {
+    public void addAnimal(Snake animal) {snakes.add(animal);
     }
 
 
@@ -46,7 +48,13 @@ public class SnakeTerrarium implements AnimalCage<Snake> {
 
 
     public Snake takeOfAnimal() {
-
-        return null;
+        if(this.snakes.isEmpty()){
+            return null;
+        }
+        else {
+            Random random = new Random();
+            int i = random.nextInt(snakes.size());
+            return (Snake) snakes.remove(i);
+        }
     }
 }

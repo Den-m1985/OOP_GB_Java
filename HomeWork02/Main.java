@@ -24,8 +24,8 @@ public class Main {
         //System.out.println(wolfRandom);
         Wolf pushok = new Wolf(2001, 6, 4, 6);
         wolvesInCage.addAnimal(pushok);
-//        System.out.println(wolvesInCage);
-//        System.out.println();
+        //System.out.println(wolvesInCage);
+        //System.out.println();
 
 
         // Homework3
@@ -34,7 +34,6 @@ public class Main {
 //        System.out.println();
 //        System.out.println(wolvesInCage);
 //        System.out.println();
-//
 //        wolvesInCage.sortYear();
 //        System.out.println("Sorted list of wolves by year:");
 //        System.out.println();
@@ -44,23 +43,23 @@ public class Main {
         // Homework4
         ArrayList<Snake> snakes = SnakesFactory.createSnakes(5);
         SnakeTerrarium snakesInCage = new SnakeTerrarium(snakes);
-        //System.out.println(snakesInCage);
-
+        System.out.println(snakesInCage);
         //AnimalUtils.sortAnimals(wolfs);
         //AnimalUtils.sortAnimals(snakes);
         //System.out.println(snakes);
-
         Zoo zoo = new Zoo();
         zoo.setSnakesInZoo(snakesInCage);
         zoo.setWolvesInZoo(wolvesInCage);
-        //ystem.out.println(zoo);
+        //System.out.println(zoo);
 
 
         // Homework5
+        TerminalReader terminalReader = new TerminalReader(zoo);
+        terminalReader.endLess();
 
 
-        TerminalReader.runReader();
-
+        //System.out.println(wolvesInCage);
+        System.out.println(snakesInCage);
 
     }
 
