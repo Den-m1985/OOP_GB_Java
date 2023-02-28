@@ -25,16 +25,16 @@ public class TerminalReader {
 
         CommandExecutableFactory coExFactory = new CommandExecutableFactory(zoo);
         Scanner scanner = new Scanner(System.in);
+        CommandParser commandParser = new CommandParser();
 
         while (true) {
             System.out.println("Что вы хотите сделать?");
-            System.out.println("1 - Добавить животное? тогда введите: add Wolf через пробел \n" +
-                    "2 - Удалить животное? введите: delete Wolf через пробел\nДля выхода нажмите q");
+            System.out.println("1 - Добавить животное? тогда введите: add Wolf или add Snake через пробел \n" +
+                    "2 - Удалить животное? введите: delete Wolf или delete Snake через пробел\nДля выхода нажмите q");
 
             String str = scanner.nextLine();
             if (str.equals("q")) break;
-            CommandParser commandParser = new CommandParser(str);
-            String [] strings = commandParser.parseCommand();
+            String [] strings = commandParser.parseCommand(str);
             coExFactory.create(strings);
             break;
         }

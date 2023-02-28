@@ -56,10 +56,8 @@ public class Main {
         // Homework5
         TerminalReader terminalReader = new TerminalReader(zoo);
         terminalReader.endLess();
-
-
         //System.out.println(wolvesInCage);
-        System.out.println(snakesInCage);
+        //System.out.println(snakesInCage);
 
     }
 

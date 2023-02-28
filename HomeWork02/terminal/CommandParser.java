@@ -4,11 +4,11 @@ public class CommandParser {
     private String[] strArray;
     private String str;
 
-    public CommandParser(String str) {
-        this.str = str;
+    public CommandParser() {
     }
 
-    public String[] parseCommand() {
+    public String[] parseCommand(String str) {
+        this.str = str;
         if (check())
             return strArray;
         return null;

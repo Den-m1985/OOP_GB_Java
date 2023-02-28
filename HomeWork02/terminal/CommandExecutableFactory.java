@@ -24,12 +24,11 @@ public class CommandExecutableFactory {
 
         switch (code) {
             case "addWolf" -> {
-                zoo.
-                wolfCage.addAnimal(new Wolf(2000,5,4,5));
+                zoo.addWolf();
                 System.out.println("add Wolf");
             }
             case "addSnake" -> {
-                snakeTerrarium.addAnimal(new Snake(2000,5,0,20));
+                zoo.addSnake();
                 System.out.println("add Snake");
             }
             case "deleteWolf" -> {

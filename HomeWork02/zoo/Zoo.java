@@ -18,9 +18,6 @@ public class Zoo {
         this.animalInZoo = new ArrayList<>();
     }
 
-    public void addSnake() {
-
-    }
 
     public WolfCage getWolvesInZoo() {
         return wolvesInZoo;
@@ -58,6 +55,15 @@ public class Zoo {
 
     public Snake takeOfSnake() {
         return this.snakesInZoo.takeOfAnimal();
+    }
+
+
+    public void addSnake() {
+        snakesInZoo.addAnimal(new Snake(2000,2,0,2));
+    }
+
+    public void addWolf() {
+        wolvesInZoo.addAnimal(new Wolf(2000,2,4,2));
     }
 
 }
