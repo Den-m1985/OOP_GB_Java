@@ -6,6 +6,8 @@ import cage.SnakeTerrarium;
 import cage.WolfCage;
 import zoo.Zoo;
 
+import java.util.ArrayList;
+
 public class CommandExecutableFactory {
     private Zoo zoo;
     private WolfCage wolfCage;
@@ -16,11 +18,14 @@ public class CommandExecutableFactory {
         this.zoo = zoo;
     }
 
-    public CommandExecutable create (String[] input){
+    public CommandExecutable create(Command command) {
 
 
+// перенести в Command
+// в нем вызываем методы true/false
+        String code = command.getAction() + command.getAnimal();
+        ArrayList<String > parameters = command.getParametersAnimal();
 
-        String code = input[0] + input[1];
 
         switch (code) {
             case "addWolf" -> {
@@ -44,7 +49,6 @@ public class CommandExecutableFactory {
         }
         return null;
     }
-
 
 
 }

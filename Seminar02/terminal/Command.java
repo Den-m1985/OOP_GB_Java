@@ -7,6 +7,7 @@ public class Command implements CommandParser {
     private List<String> inputCommand;
 
 
+
     public Command(List<String> inputCommand) {
         this.inputCommand = inputCommand;
     }

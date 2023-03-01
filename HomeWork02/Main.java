@@ -4,6 +4,7 @@ import cage.SnakeTerrarium;
 import cage.WolfCage;
 import factory.SnakesFactory;
 import factory.WolfFactory;
+import terminal.CommandParser;
 import terminal.TerminalReader;
 import zoo.Zoo;
 
@@ -56,6 +57,7 @@ public class Main {
         // Homework5
         TerminalReader terminalReader = new TerminalReader(zoo);
         terminalReader.endLess();
+
         //System.out.println(wolvesInCage);
         //System.out.println(snakesInCage);
 
