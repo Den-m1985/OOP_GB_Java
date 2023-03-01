@@ -10,15 +10,17 @@ public class TerminalReader {
     private Zoo zoo;
     private Command command;
 
+
     public TerminalReader(Zoo zoo) {
         this.zoo = zoo;
     }
 
 
-    private TerminalReader(CommandParser commandParser){
+    private TerminalReader(CommandParser commandParser) {
         this.commandParser = commandParser;
     }
-// SingleTon
+
+    // SingleTon
     public static TerminalReader terminalReader(CommandParser commandParser) {
         if (terminalReader == null) {
             terminalReader = new TerminalReader(commandParser);
@@ -30,11 +32,13 @@ public class TerminalReader {
     public void endLess() {
 
         CommandExecutableFactory coExFactory = new CommandExecutableFactory(zoo);
+        PrintMenu printMenu = new PrintMenu();
         Scanner scanner = new Scanner(System.in);
         //CommandParser commandParser = new CommandParser();
 
         while (true) {
-            command.printMenu();
+
+            printMenu.printMenu();
 
             String str = scanner.nextLine();
             if (str.equals("q")) break;
