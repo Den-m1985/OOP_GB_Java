@@ -95,3 +95,8 @@
     Создать класс LogingCommandExecutableFactory, наследующий класс CommandExecutableFactory
     Переопределить единственный метод так, чтобы он вызывал внутри себя метод предка,
     но в начале и конце распечатывал информацию о входных и выходных параметрах
+
+    Задача3 семинара 6
+    Переименовать класс CommandExecutableFactory в CommandExecutableFactoryImpl
+    Создать интерфейс CommandExecutableFactory и имплементировать от него класс CommandExecutableFactoryImpl.
+    В классе TerminalReader реализовать DIP, то есть возможность менять реализации CommandExecutableFactory

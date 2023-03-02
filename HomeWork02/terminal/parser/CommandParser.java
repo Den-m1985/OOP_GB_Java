@@ -1,22 +1,11 @@
-package terminal;
+package terminal.parser;
+
+import terminal.Command;
 
 public interface CommandParser {
 
-//    private String[] strArray;
-//    private String str;
-
     public Command parseCommand(String str);
 
-
-//    public CommandParser() {
-//    }
-
-//    public String[] parseCommand(String str) {
-//        this.str = str;
-//        if (check())
-//            return strArray;
-//        return null;
-//    }
 
 
 //    boolean check() {

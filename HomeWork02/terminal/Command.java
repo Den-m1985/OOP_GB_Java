@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Command {
     private String action;
     private String animal;
-    private ArrayList<String> parametersAnimal;
+    //private ArrayList<String> parametersAnimal;
 
 
-    public Command(String action, String animal, ArrayList<String> parametersAnimal) {
+    public Command(String action, String animal) {
         this.action = action;
         this.animal = animal;
-        this.parametersAnimal = parametersAnimal;
+        //this.parametersAnimal = parametersAnimal;
     }
 
     public String getAction() {
@@ -22,9 +22,9 @@ public class Command {
         return animal;
     }
 
-    public ArrayList<String> getParametersAnimal() {
-        return parametersAnimal;
-    }
+//    public ArrayList<String> getParametersAnimal() {
+//        return parametersAnimal;
+//    }
 
 
     // Добавить с статические переменные.

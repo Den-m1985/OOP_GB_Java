@@ -4,8 +4,10 @@ import cage.SnakeTerrarium;
 import cage.WolfCage;
 import factory.SnakesFactory;
 import factory.WolfFactory;
-import terminal.CommandParser;
+import terminal.CommandExecutableFactoryImpl;
 import terminal.TerminalReader;
+import terminal.parser.CommandParser;
+import terminal.parser.CommandParserInput;
 import zoo.Zoo;
 
 import java.util.ArrayList;
@@ -55,11 +57,19 @@ public class Main {
 
 
         // Homework5
-        TerminalReader terminalReader = new TerminalReader(zoo);
+        CommandParser commandParser = new CommandParserInput();
+
+        TerminalReader terminalReader = TerminalReader.terminalReader(commandParser, new CommandExecutableFactoryImpl(zoo));
         terminalReader.endLess();
 
         //System.out.println(wolvesInCage);
         //System.out.println(snakesInCage);
+
+        /* Нарисовал схему Drawio (надо доработать)
+        Создал package parser, перенес туда парсеры.
+
+
+        */
 
     }
 

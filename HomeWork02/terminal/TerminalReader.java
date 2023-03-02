@@ -1,14 +1,16 @@
 package terminal;
 
+import terminal.parser.CommandParser;
 import zoo.Zoo;
 
 import java.util.Scanner;
 
 public class TerminalReader {
     private static TerminalReader terminalReader;
-    private CommandParser commandParser;
+    private CommandParser commandParser;  // Зависимость
+    private CommandExecutableFactory commandExecutableFactory;  // Зависимость
     private Zoo zoo;
-    private Command command;
+    private Command command;  // ??????
 
 
     public TerminalReader(Zoo zoo) {
@@ -16,14 +18,15 @@ public class TerminalReader {
     }
 
 
-    private TerminalReader(CommandParser commandParser) {
+    private TerminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory) {
         this.commandParser = commandParser;
+        this.commandExecutableFactory = commandExecutableFactory;
     }
 
     // SingleTon
-    public static TerminalReader terminalReader(CommandParser commandParser) {
+    public static TerminalReader terminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory) {
         if (terminalReader == null) {
-            terminalReader = new TerminalReader(commandParser);
+            terminalReader = new TerminalReader(commandParser, commandExecutableFactory);
         }
         return terminalReader;
     }
@@ -31,10 +34,10 @@ public class TerminalReader {
 
     public void endLess() {
 
-        CommandExecutableFactory coExFactory = new CommandExecutableFactory(zoo);
+
         PrintMenu printMenu = new PrintMenu();
         Scanner scanner = new Scanner(System.in);
-        //CommandParser commandParser = new CommandParser();
+
 
         while (true) {
 
@@ -42,10 +45,14 @@ public class TerminalReader {
 
             String str = scanner.nextLine();
             if (str.equals("q")) break;
-            Command newCom = this.commandParser.parseCommand(str);
+            Command newCommand = this.commandParser.parseCommand(str);
+
+            CommandExecutable commandExecutable = this.commandExecutableFactory.create(newCommand, zoo);
+            commandExecutable.execute();
+
 
             //String [] strings = commandParser.parseCommand(str);
-            //coExFactory.create(strings);
+            //commandExecutableFactory.create(strings);
             break;
         }
         scanner.close();
