@@ -9,7 +9,7 @@ public class TerminalReader {
     private static TerminalReader terminalReader;
     private CommandParser commandParser;  // Зависимость
     private CommandExecutableFactory commandExecutableFactory;  // Зависимость
-    private Zoo zoo;
+    private final Zoo zoo;
     private Command command;  // ??????
 
 
@@ -18,15 +18,16 @@ public class TerminalReader {
     }
 
 
-    private TerminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory) {
+    private TerminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory, Zoo zoo) {
         this.commandParser = commandParser;
         this.commandExecutableFactory = commandExecutableFactory;
+        this.zoo = zoo;
     }
 
     // SingleTon
-    public static TerminalReader terminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory) {
+    public static TerminalReader terminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory, Zoo zoo) {
         if (terminalReader == null) {
-            terminalReader = new TerminalReader(commandParser, commandExecutableFactory);
+            terminalReader = new TerminalReader(commandParser, commandExecutableFactory, zoo);
         }
         return terminalReader;
     }

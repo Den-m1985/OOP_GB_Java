@@ -59,7 +59,8 @@ public class Main {
         // Homework5
         CommandParser commandParser = new CommandParserInput();
 
-        TerminalReader terminalReader = TerminalReader.terminalReader(commandParser, new CommandExecutableFactoryImpl(zoo));
+        TerminalReader terminalReader = TerminalReader.terminalReader(commandParser,
+                new CommandExecutableFactoryImpl(), zoo);
         terminalReader.endLess();
 
         //System.out.println(wolvesInCage);

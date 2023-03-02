@@ -13,8 +13,8 @@ public class CommandExecutableFactoryImpl implements CommandExecutableFactory {
     private Command command;
 
 
-    public CommandExecutableFactoryImpl(Zoo zoo) {
-        this.zoo = zoo;
+    public CommandExecutableFactoryImpl() {
+
     }
 
     public CommandExecutable create(Command command, Zoo zoo) {

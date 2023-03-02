@@ -5,9 +5,9 @@ import zoo.Zoo;
 public class LogingCommandExecutableFactory extends CommandExecutableFactoryImpl {
 private Zoo zoo;
 
-    public LogingCommandExecutableFactory(Zoo zoo) {
-        super(zoo);
-    }
+//    public LogingCommandExecutableFactory(Zoo zoo) {
+//        super(zoo);
+//    }
 
 
     @Override
