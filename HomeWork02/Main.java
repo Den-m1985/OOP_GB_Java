@@ -4,7 +4,6 @@ import cage.SnakeTerrarium;
 import cage.WolfCage;
 import factory.SnakesFactory;
 import factory.WolfFactory;
-import terminal.CommandExecutableFactoryImpl;
 import terminal.TerminalReader;
 import terminal.parser.CommandParser;
 import terminal.parser.CommandParserInput;
@@ -56,20 +55,22 @@ public class Main {
         //System.out.println(zoo);
 
 
-        // Homework5
+        // Homework5 // Homework6   // Homework7
         CommandParser commandParser = new CommandParserInput();
 
-        TerminalReader terminalReader = TerminalReader.terminalReader(commandParser,
-                new CommandExecutableFactoryImpl(), zoo);
+        TerminalReader terminalReader = TerminalReader.terminalReader(commandParser, zoo);
         terminalReader.endLess();
 
         //System.out.println(wolvesInCage);
         //System.out.println(snakesInCage);
 
-        /* Нарисовал схему Drawio (надо доработать)
-        Создал package parser, перенес туда парсеры.
-
-
+        /* -Нарисовал схему Drawio
+        -Создал package parser, перенес туда парсеры.
+        -Создал package execute, перенес туда соответствующие классы.
+        -Создал package comand, перенес туда туда соответствующие классы.
+        -В Command добавил методы проверки и очистил от лишнего.
+        -Сделал класс CheckInput на проверку входящих значений.
+        -Из Terminal Reader удалил все лишнее (как мне кажется), PrintMenu и т.п.
         */
 
     }

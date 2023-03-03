@@ -19,18 +19,8 @@ public class Zoo {
     }
 
 
-    public WolfCage getWolvesInZoo() {
-        return wolvesInZoo;
-    }
-
-
     public void setWolvesInZoo(WolfCage wolvesInZoo) {
         this.wolvesInZoo = wolvesInZoo;
-    }
-
-
-    public SnakeTerrarium getSnakesInZoo() {
-        return snakesInZoo;
     }
 
 
@@ -52,11 +42,9 @@ public class Zoo {
         return this.wolvesInZoo.takeOfAnimal();
     }
 
-
     public Snake takeOfSnake() {
         return this.snakesInZoo.takeOfAnimal();
     }
-
 
     public void addSnake() {
         snakesInZoo.addAnimal(new Snake(2000,2,0,2));
