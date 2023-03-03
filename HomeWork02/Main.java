@@ -64,14 +64,6 @@ public class Main {
         //System.out.println(wolvesInCage);
         //System.out.println(snakesInCage);
 
-        /* -Нарисовал схему Drawio
-        -Создал package parser, перенес туда парсеры.
-        -Создал package execute, перенес туда соответствующие классы.
-        -Создал package comand, перенес туда туда соответствующие классы.
-        -В Command добавил методы проверки и очистил от лишнего.
-        -Сделал класс CheckInput на проверку входящих значений.
-        -Из Terminal Reader удалил все лишнее (как мне кажется), PrintMenu и т.п.
-        */
 
     }
 
