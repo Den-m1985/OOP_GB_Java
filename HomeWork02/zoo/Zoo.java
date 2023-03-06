@@ -54,4 +54,5 @@ public class Zoo {
         wolvesInZoo.addAnimal(new Wolf(2000,2,4,2));
     }
 
+
 }

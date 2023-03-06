@@ -9,9 +9,7 @@ import java.util.Scanner;
 public class TerminalReader {
     private static TerminalReader terminalReader;
     private CommandParser commandParser;  // Зависимость
-    private CommandExecutable commandExecutable;
     private final Zoo zoo;
-    private Command command;
 
 
     public TerminalReader(Zoo zoo) {
@@ -24,17 +22,13 @@ public class TerminalReader {
         this.zoo = zoo;
     }
 
+
     // SingleTon
     public static TerminalReader terminalReader(CommandParser commandParser, Zoo zoo) {
         if (terminalReader == null) {
             terminalReader = new TerminalReader(commandParser, zoo);
         }
         return terminalReader;
-    }
-
-
-    public void setCommandExecutable(Command command) {
-        this.commandExecutable = new LoginCommandExecutableFactory(zoo).create(command);
     }
 
 
@@ -48,10 +42,10 @@ public class TerminalReader {
             printMenu.printMenu();
             String str = scanner.nextLine();
             if (str.equals(PrintMenu.Q)) break;
-            CheckInput checkInput = new CheckInput(str);
-            if (checkInput.check()) {
-                command = this.commandParser.parseCommand(str);
-                setCommandExecutable(command);
+
+            if (CheckInput.check(str)) {
+                Command command = this.commandParser.parseCommand(str);
+                CommandExecutable commandExecutable = new LoginCommandExecutableFactory(zoo).create(command);
                 commandExecutable.execute();
             }
         }

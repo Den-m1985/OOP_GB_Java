@@ -9,6 +9,7 @@ public class Command {
     public static final String DELETESNAKE = "deleteSnake";
 
 
+
     public Command(String command) {
         this.command = command;
     }
@@ -29,5 +30,6 @@ public class Command {
     public boolean isDeleteSnake() {
         return command.equals(DELETESNAKE);
     }
+
 
 }
