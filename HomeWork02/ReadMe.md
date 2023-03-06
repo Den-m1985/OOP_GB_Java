@@ -100,3 +100,24 @@
     Переименовать класс CommandExecutableFactory в CommandExecutableFactoryImpl
     Создать интерфейс CommandExecutableFactory и имплементировать от него класс CommandExecutableFactoryImpl.
     В классе TerminalReader реализовать DIP, то есть возможность менять реализации CommandExecutableFactory
+
+
+    Комментарий преподавателя:
+    + Схема эта круто!
+    - переменная private Command command; пускай будет локальной переменной
+    - public void setCommandExecutable(Command command) {
+    this.commandExecutable = new LoginCommandExecutableFactory(zoo).create(command);
+    }
+    метод нарушает инкапсуляцию. Поскольку он используется внутри класса, то должен быть скрыт.
+    Да и необходимости в нем нет. И имя у него вводящее в заблуждение.
+    - отсуствует модифкатор доступа у метода boolean check().
+    И не понятно зачем вы создаете переменную класса, а не локальную.
+    - if (strArray[0].equals("add") || strArray[0].equals("delete")) return true;
+    else if (strArray[1].equals("Wolf") || strArray[1].equals("Snake")) return true;
+    return false;
+    это все можно заменить на 
+    return strArray[0].equals("add") || strArray[0].equals("delete") || strArray[1].equals("Wolf") || strArray[1].equals("Snake"),
+    а еще лучше создать энам с доступными командами и перенести эту логику туда.
+    - снова private String outString; лишняя переменная объекта. Должна быть локальной.
+    - у вас хардкод в проверках и в Command. Лучше его держать в одном месте
+    + фабрика крутая
